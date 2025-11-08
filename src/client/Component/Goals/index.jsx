@@ -1,4 +1,3 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
 
 const initialData = [
@@ -10,7 +9,7 @@ const initialData = [
   }
 ];
 
-const GoalProgressForm = () => {
+const GoalProgressForm = ({data}) => {
   const [sleepRating, setSleepRating] = useState(0);
   const [goals, setGoals] = useState(initialData);
 
