@@ -1,0 +1,15 @@
+.nav-link:hover {
+  color: #ffd700; /* bright gold on hover */
+  transition: 0.3s;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 20px;
+  color: #ffffff !important;
+}
+
+.nav-link.active {
+  text-decoration: underline;
+  color: #ffffff !important;
+}

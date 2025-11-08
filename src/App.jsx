@@ -1,14 +1,26 @@
-import './App.css'
-import { Navigation } from './client/Component/Navigation'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import GoalProgressForm from './client/Component/Goals/index'
+import Navbar from './client/Component/Navigation';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
 
 
   return (
-    <>
-    <Navigation/>
-    </>
+    <Router>
+    <Navbar/>
+    <div className="container mt-5">
+        <Routes>
+          <Route path="/dashboard" element={()=>{<>add your component</>}} />
+          <Route path="/goals" element={<GoalProgressForm />} />
+          <Route path="/trackgoals" element={()=>{<>add your component</>}} />
+          <Route path="/profile" element={()=>{<>add your component</>}} />
+        </Routes>
+      </div>
+    </Router>
   )
 }
 
 export default App
+
+
+
