@@ -51,6 +51,15 @@ const Navbar = () => {
                 Reports
               </NavLink>
             </li>
+             <li className="nav-item">
+              <NavLink
+                className="nav-link text-white fw-bold"
+                style={{ fontSize: "16px" }}
+                to="/patient"
+              >
+                My Patients
+              </NavLink>
+            </li>
             <li className="nav-item">
               <NavLink
                 className="nav-link text-white fw-bold"
