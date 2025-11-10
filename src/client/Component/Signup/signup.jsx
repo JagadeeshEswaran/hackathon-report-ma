@@ -46,7 +46,7 @@ const Signup = () => {
       setSuccess('Account created successfully!');
 
       // Redirect to dashboard after a short pause
-      setTimeout(() => navigate('/dashboard'), 600);
+      setTimeout(() => navigate('/goals'), 600);
     } catch (err) {
       setError(err.message);
     } finally {

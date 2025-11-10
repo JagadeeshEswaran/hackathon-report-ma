@@ -8,7 +8,7 @@ function App() {
 
   return (
     <Router>
-    <Navbar/>
+    { sessionStorage.token && <Navbar/> }
     <div className="container mt-5">
         <Routes>
           <Route path="/" element={<SignUp />} />

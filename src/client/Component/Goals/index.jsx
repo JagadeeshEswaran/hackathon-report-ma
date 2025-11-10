@@ -36,9 +36,21 @@ const GoalProgressForm = () => {
     alert("Goal data submitted! Check console for details.");
   };
 
-  return (
+  return sessionStorage.token ? (
     <div className="container mt-5">
       <h3 className="text-center mb-4">Goal Progress</h3>
+      <button
+        type="button"
+        style={{'float': 'right', 'margin-bottom': '15px'}}
+        className="btn btn-outline-secondary"
+        onClick={() => {
+          sessionStorage.removeItem('token');
+          
+        }
+      }
+      >
+        <a href='/' >{}Logout</a>
+      </button>
       <form onSubmit={handleGoal}>
         <table className="table table-bordered align-middle">
           <tbody>
@@ -126,7 +138,7 @@ const GoalProgressForm = () => {
         </table>
       </form>
     </div>
-  );
+  ) : <div>Unauthorized Access</div>;
 };
 
 export default GoalProgressForm;
